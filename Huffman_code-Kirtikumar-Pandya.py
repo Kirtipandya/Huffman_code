@@ -1,5 +1,3 @@
-# Reference : https://gist.github.com/mreid/fdf6353ec39d050e972b
-
 def huffman(p):
     '''Return a Huffman code for an ensemble with distribution p.'''
     assert(sum(p.values()) == 1.0) # Ensure probabilities sum to 1
@@ -29,8 +27,10 @@ def lowest_prob_pair(p):
     return sorted_p[0][0], sorted_p[1][0]
 
 # Example execution
-ex1 = { '1': 0.49, '2': 0.26, '3': 0.12, '4': 0.04, '5': 0.04, '6': 0.03, '7': 0.02}
-print(huffman(ex1))
+ex44 = { '1': 0.49, '2': 0.26, '3': 0.12, '4': 0.04, '5': 0.04, '6': 0.03, '7': 0.02}
+print(huffman(ex44))
 print("""
 Here, we can see all the answer fulfill the Prefix condition.
 """)
+
+# Reference : https://gist.github.com/mreid/fdf6353ec39d050e972b
