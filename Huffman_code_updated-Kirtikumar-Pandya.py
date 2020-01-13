@@ -1,5 +1,4 @@
 ex44 = { '1': 0.49, '2': 0.26, '3': 0.12, '4': 0.04, '5': 0.04, '6': 0.03, '7': 0.02}
-#ex44 = { '1': 0.49, '2': 0.26}
 def huffman_method2(prob):
 
     temp = prob.copy()
@@ -16,19 +15,20 @@ def huffman_method2(prob):
         prob[get_zero + get_one] = sorted_prob[0][1] + sorted_prob[1][1]
 
     new_prob1 = [(x,new_prob[x]) for x in new_prob]
-    print(new_prob1)
-    length = len(new_prob1) + 1
+    length = len(new_prob1) - 1
     for item in temp:
+        l1 = length
         a = item[0]
-        while
+        while l1 != 0:
+            if a in new_prob1[l1][0]:
+                try:
+                    temp1[a] += new_prob1[l1][1]
+                except:
+                    temp1[a] = new_prob1[l1][1]
 
+            l1 -= 1
 
-        # if a in new_prob1[length-1][0]:
-        #     if temp1[a] in None: temp1[a] = new_prob1[length][1]
-        #     else: temp1[a] += new_prob1[length][1]
-        # length -= 1
-
-    return new_prob
+    return temp1
 
 print(huffman_method2(ex44))
 
